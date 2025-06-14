@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>История Загира</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('couple-bg.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 40px;
+    }
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #e85d75;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    z-index: 1000;
+  ">← Назад</a>
+
+  <div class="content">
+    <h1>История - Мы</h1>
+    <p>Загир — сильный, надёжный и целеустремлённый. Он прошёл свой путь с достоинством, и каждый шаг приближал его к судьбоносной встрече. Это рассказ о верности, решимости и любви.</p>
+    <div class="gallery">
+      <img src="3f77c6d7-e4a3-495a-b872-c8a6a109e24f.jpg" alt="История - Мы" class="gallery-img" />
+      <img src="5c701f5a-3106-47c1-b71f-b0552e6b86b5.jpg" alt="История - Мы" class="gallery-img" />
+      <img src="5fefe50d-2c5d-4072-a570-48299e8fde2b.jpg" alt="История - Мы" class="gallery-img" />
+      <img src="7a2a056f-0ce1-405a-9402-5a0504154683.jpg" alt="История - Мы" class="gallery-img" />
+      <img src="39ff76bf-c478-4df3-8ed5-2cc263adaafe.jpg" alt="История - Мы" class="gallery-img" />
+<img src="79f250a8-67a1-43f0-812d-78ded223b155.jpg" alt="История - Мы" class="gallery-img" />
+<img src="97cc131c-4bdd-410a-8a98-23466e43921c.jpg" alt="История - Мы" class="gallery-img" />
+<img src="354fc9fc-b52c-4d40-8b03-a6b659e78a57.jpg" alt="История - Мы" class="gallery-img" />
+<img src="2289b46a-e690-48d2-a068-d2cf0ae722b8.jpg" alt="История - Мы" class="gallery-img" />
+<img src="7455ce98-833a-4f12-88dd-7a1565cd9c59.jpg" alt="История - Мы" class="gallery-img" />
+<img src="8747a693-02f5-4d0c-a607-6830da82a428.jpg" alt="История - Мы" class="gallery-img" />
+<img src="42912f0b-4cf5-477e-9858-07981f2afabc.jpg" alt="История - Мы" class="gallery-img" />
+<img src="a6fa9861-3ca2-482c-ba4a-b2938b7105d7.jpg" alt="История - Мы" class="gallery-img" />
+<img src="a4437f43-0b4d-496d-accd-c58cd4f8eb3e.jpg" alt="История - Мы" class="gallery-img" />
+<img src="b0e9d66a-a0b0-49d7-bc5c-068ef1ae3572.jpg" alt="История - Мы" class="gallery-img" />
+<img src="bf6b620b-b58f-4469-be0c-e8370e0146dc.jpg" alt="История - Мы" class="gallery-img" />
+
+<img src="d86c8af3-b028-461e-bc50-e9286f3b595e.jpg" alt="История - Мы" class="gallery-img" />
+<img src="d3095ca4-b2c2-4e1e-b2f4-6eb054ca8be8.jpg" alt="История - Мы" class="gallery-img" />
+<img src="ebdc5d07-d57b-49d4-85ce-eb6e1002c686.jpg" alt="История - Мы" class="gallery-img" />
+<img src="f2326622-bb56-4bce-a0eb-2fbc5b995155.jpg" alt="История - Мы" class="gallery-img" />
+<img src="faa8a04e-b434-4773-b72a-922e9175abbd.jpg" alt="История - Мы" class="gallery-img" />
+
+</div>
+    
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center;z-index:1000;">
+    <img id="modalImg" src="" style="max-width:90%;max-height:90%;border:5px solid white;border-radius:10px;" />
+  </div>
+  <script>
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.onclick = () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+      };
+    });
+    modal.onclick = () => {
+      modal.style.display = 'none';
+    };
+  </script>
+</body>
+
+</html>

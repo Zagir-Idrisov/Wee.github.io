@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>История Загира</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('couple-bg.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 40px;
+    }
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #e85d75;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    z-index: 1000;
+  ">← Назад</a>
+
+  <div class="content">
+    <h1>История Загира</h1>
+    <p>Загир — сильный, надёжный и целеустремлённый. Он прошёл свой путь с достоинством, и каждый шаг приближал его к судьбоносной встрече. Это рассказ о верности, решимости и любви.</p>
+    <div class="gallery">
+      <img src="f01e32d5-89f8-43ab-8b7e-18cfeb114e73.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="d5830afa-f6e0-406d-a027-febd3e74b594.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="d1431a76-79a8-460c-956f-2d9010a7a31b.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="ace49713-33f0-4ead-b453-a78c98e9e140.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="7248155b-546f-4910-83e6-1fff778e90f2.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="2735d6bf-ca1c-4b58-9644-233d77ff61a7.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="835b3106-1762-42de-80ea-ac6df67ee87b.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="6ddc4e25-2a5b-4c0b-8ea9-7b758638a83a.jpg" alt="Фото Загира" class="gallery-img" />
+      <img src="5a032d9d-6050-4d15-aa3b-19d3fcf06415.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="1b4ad9b9-b276-460e-bd14-8dfd774c995a.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="3f81d36f-017c-42be-9231-7b16593245f6.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="4b17be69-065c-44a8-8ecf-5705c6b6b1f5.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="46ca5c4d-17cc-4f6b-a499-86a8b3e5a064.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="59d39bac-f3d6-48e8-9cc9-4b1eb212214c.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="b11381d9-abf1-4c59-9435-3899b9944d6e.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="d6bbfb41-28dc-42b6-ae20-eb7a0828215d.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="d9ebe108-d982-4d5c-a7c9-5d6727b2761b.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="d2495ae8-2668-4f3c-ac0b-173fa4fbaaf1.jpg" alt="Фото Загира" class="gallery-img" />
+<img src="df0a1e5e-c4bd-4004-ab1c-b1b134cc2130.jpg" alt="Фото Загира" class="gallery-img" />
+
+
+    
+</div>
+    
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center;z-index:1000;">
+    <img id="modalImg" src="" style="max-width:90%;max-height:90%;border:5px solid white;border-radius:10px;" />
+  </div>
+  <script>
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.onclick = () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+      };
+    });
+    modal.onclick = () => {
+      modal.style.display = 'none';
+    };
+  </script>
+</body>
+
+</html>
